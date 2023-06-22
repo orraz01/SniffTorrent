@@ -1,0 +1,77 @@
+﻿<Window x:Class="projectGUI.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projectGUI"
+        mc:Ignorable="d"
+      Height="463.35" Width="400"
+        Background= "#15202b"
+        Name="loginWin" 
+          Icon="images\final logo.ico"
+            ResizeMode="CanMinimize"
+            Title="SniffTorrent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Foreground="Red" FontFamily="Myriad SemiExtended Bold" FontWeight="Bold" FontSize="15" Background="Transparent" x:Name="ErrorBox"  HorizontalAlignment="Center" Margin="0,0,0,0"></Label>
+        <Label Grid.Row="0" HorizontalAlignment="Center" Foreground="White" FontFamily="Myriad SemiExtended Bold" FontSize="57" Margin="20">
+            <Bold>Sniff<Span Foreground="#e30e2c">Torrent</Span>
+            </Bold>
+        </Label>
+        <StackPanel Grid.Row="2">
+            <Label HorizontalAlignment="Center" Foreground="White" FontFamily="Myriad SemiExtended Bold" FontSize="30">
+                <Bold>
+                    Username
+                </Bold>
+            </Label>
+            <TextBox x:Name="username" Width="200" HorizontalAlignment="Center" Height="20" Margin="15,0,20,0"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3">
+            <Label HorizontalAlignment="Center" Foreground="#e30e2c" FontFamily="Myriad SemiExtended Bold" FontSize="30">
+                <Bold>
+                    Password
+                </Bold>
+            </Label>
+            <PasswordBox x:Name="password" PasswordChar="*" Width="200" HorizontalAlignment="Center" Height="20" Margin="15,0,20,0"></PasswordBox>
+        </StackPanel>
+        <Button Grid.Row="4" Height="30" Foreground="White" FontFamily="Myriad SemiExtended Bold" FontWeight="Bold" FontSize="25" Width="90" HorizontalAlignment="Left" Background="Transparent" Margin="50,0,0,0" Click="LoginUser" Content="Login">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Grid.Row="4" Height="34" Foreground="White" FontFamily="Myriad SemiExtended Bold" FontWeight="Bold" FontSize="25" Width="100" Background="Transparent"   HorizontalAlignment="Right" Margin="0,0,50,0" Click="RegisterUser"  Content="Register">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
+    </Grid>
+</Window>

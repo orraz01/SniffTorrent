@@ -1,0 +1,50 @@
+﻿<Window x:Class="projectGUI.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SniffTorrent" 
+      Height="463.35" Width="400"
+        Background= "#15202b"
+        Name="InfoWin" 
+          Icon="images\final logo.ico"
+     ResizeMode="CanMinimize"
+>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button VerticalAlignment="Center" FontSize="20"  Grid.Row="0" Click="Back_Click" Background="Transparent" HorizontalAlignment="Left" BorderBrush="Transparent" Foreground="White">
+            <Bold>&lt;</Bold></Button>
+        <Label Grid.Row="1" HorizontalAlignment="Center" Foreground="White" FontFamily="Myriad SemiExtended Bold" FontSize="57" Margin="20">
+            <Bold>Sniff<Span Foreground="#e30e2c">Torrent</Span>
+            </Bold>
+        </Label>
+        <Border Grid.Row="2" Grid.RowSpan="2" CornerRadius="30" Margin="30">
+            <Border.Background>
+                <SolidColorBrush Color="Yellow" Opacity="0.4"></SolidColorBrush>
+            </Border.Background>
+            <ScrollViewer Background="Transparent"
+                  VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Margin="10"
+                  Padding="10"
+                  BorderThickness="0" 
+                  >
+                <TextBlock TextWrapping="Wrap" Margin="20"  Foreground="Orange" Padding="10" ScrollViewer.CanContentScroll="True">
+                <Bold><Underline>Info:</Underline> <LineBreak/><LineBreak/> This is a highschool project that implements mainline dht in a large scale in order to catch piracy in the p2p network of torrent.
+                <LineBreak/>This project takes for refrence bep 5, bep 3, bep 9, and bep 10 in order to achieve this goal.
+                <LineBreak/>Whenever a user in the network announces its downloading a file I add it to that data base and later on display it here.
+                <LineBreak/> The project takes a file's name as an input and sends as a response every user that previously downloaded any file that contains the name.</Bold>
+
+                </TextBlock>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>
